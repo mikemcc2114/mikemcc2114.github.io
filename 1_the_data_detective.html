@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mike McCormick</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("flatirons.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: top;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.nav {
+  padding: 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image" id="title">
+  <div class="hero-text">
+    <h1 style="font-size:80px">Mike McCormick</h1>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="nav" id="mynav">
+  <ul>
+    <li><a class="active" href="https://mikeamccormick.com">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="reading.html">Reading Notes</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<div class="content" id="reading">
+  <h1>The Data Detective</h1>
+  <p>author: Tim Harford</p>
+  <p>date completed: 2021-12-29</p>
+  <p>--Beware your feelings and what they bias you to believe. We believe what
+    we want to believe and are prone to selection bias of facts that support our
+     view while ignoring points that don't. First, examine your feelings and
+     what they make you inclined to believe; ask yourself "how does this make me
+      feel?" </p>
+  <p>--Weigh stories from two viewpoints - personal experience vs statistical
+    summary. Be wary of Goodhart's law: "A statistical metric may be a pretty
+    decent proxy for something that really matters, but it is almost always a
+    proxy rather than the real thing. Once you start using that proxy as a
+    target to be improved, or a metric to control others at a distance,
+    it will be distorted, faked, or undermined. The value of the measure will
+    evaporate."</p>
+  <p>--Avoid premature enumeration - clarify what is being measured and how;
+    what is the definition bring used? Start by asking what the claim actually
+    means, in context! Eg rise in death rates really due to change in
+    classification, not actual death rate change.</p>
+  <p>--When presented with statistics, stop and think about context first.
+    What do I feel about the numbers, why are they being presented, what is
+    being presented, how was it counted, by what definition?</p>
+  <p>--Step back and look for data to put the statistics in context. Don't think
+    about it in isolation; what are the trends, what can it be compared to,
+    what can give you a sense of scale.</p>
+  <p>--Get the backstory: where was the data from and how was it collected? What
+    was the sample size? How large was the effect? Was it statistically
+    significant? Beware the replication crisis; don't rely on one study -
+    what was a preponderance of the literature, covering multiple methods and
+    results, suggest?</p>
+  <p>--Ask who is missing, and how that may bias results. Was the study only
+    conducted on WEIRD subjects (Western, Educated, and from Industrialized
+    Rich Democracies)? Male vs female, young vs old? Was it a random,
+    representative sample or was there sampling bias?</p>
+  <p>--Don't confuse the right data with data that is easier to collect -
+    introduces sample bias!</p>
+  <p>--Beware using correlation for prediction. If you don't know what causes
+    the correlation, you wont know what causes its' predictive power to
+    breakdown. Eg google flu trends correlated flu with winter; it totally
+    missed summer flu outbreak. Demand transparency in models IOT understand
+    how they can break down and be exploited.</p>
+  <p>--Computers and algorithms aren't racist, sexist, etc. But if they are
+    trained on our own historical biases they can be. Ask which algorithms can
+    we trust, and what can we trust them with?</p>
+  <p>--Don't take statistical bedrock for granted. Statisticians can be
+    pressured to change or omit the stats.</p>
+  <p>--Never let zippy design distract you from the fact that the underlying
+    numbers may be wrong.</p>
+  <p>--Without well-defined standards for statistical record-keeping, nothing
+    adds up. Numbers can easily confuse us when unmoored from a clear
+    definition.</p>
+  <p>--Bottom line: be curious and question everything!</p>
+
+  <hr color="black">
+</div>
+
+<div class="content" id="contact">
+  Find me on
+  <a href="https://www.linkedin.com/in/mikeamccormick/" style="text-decoration:none">
+  LinkedIn
+</a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var nav = document.getElementById("mynav");
+var sticky = nav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mike McCormick</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("flatirons.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: top;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.nav {
+  padding: 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image" id="title">
+  <div class="hero-text">
+    <h1 style="font-size:80px">Mike McCormick</h1>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="nav" id="mynav">
+  <ul>
+    <li><a class="active" href="https://mikeamccormick.com">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="reading.html">Reading Notes</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<div class="content" id="reading">
+  <h1>Managing for Results</h1>
+  <p>author: Peter Drucker</p>
+  <p>date completed: 2022-01-27</p>
+  <p>--Reinforce success (and opportunity), not failure. Don't assign your most
+     skilled people to the hard problems, assign them to the ones that provide
+    greatest opportunity for future. Eg don't assign best salesmen to the
+    hardest to win deals, assign them to the deals that will drive
+    tomorrow's success.</p>
+  <p>--"Concentration is the key to business results". Focus focus focus! If
+    you have a B2B and B2C business, pick one and focus, don't serve mediocre
+    products to both. Concentrate on the 20% that will produce 80% of
+    results.</p>
+  <p>--Don't cut cost by implementing a "fair" across the board 5-10% cost. This
+    may hamstring otherwise successful efforts. Focus on where the
+    preponderance of costs are.</p>
+  <p>--Three tasks of the executive: 1) making effective the present business
+    2) finding business potential 3) making the future of the business.</p>
+  <p>--"Focusing resources on results is the best and most effective cost
+    control...no matter how cheap or efficient an effort, it is waste, rather
+    than cost, if it is devoid of results."</p>
+  <p>--"The one truly effective way to cut costs is to cut out an activity
+    altogether. To try to cut back costs is rarely effective. There is little
+    point to trying to do cheaply what should not be done at all."</p>
+  <p>--Before deciding where to cut costs, build a holistic view of the entire
+    business - the cost stream - from supplier to customer. Then identify where
+    significant costs are (highest percentage of dollar paid by customer) and
+    where effective cost reduction can take place. Is it in materials?
+    Distribution/warehousing costs? Rather than cutting cost to increase
+    margins, can you manage cash flow better (faster)? Develop a view of the
+    costs as a system before taking action.</p>
+  <p>--"Not-doing" or waste can be a high cost as well - eg planes or trucks
+    coming back empty on return leg instead of full. To fix, processes and
+    business models may need to be re-designed.</p>
+  <p>--The natural state of a business is entropy: gradual decline in performance
+    and increase in waste/costs. Only a purposeful program can counteract it.</p>
+  <p>--Build on strength. Look for opportunities rather than problems, stress
+    attainable results rather than dangers to be avoided. Control your destiny,
+    don't let it control you.</p>
+  <p>--"First-class people must always be allocated to major opportunities, to the
+     areas of greatest possible return for each unit of effort." Accept risk by
+     assigning less resources to weaker opportunities.</p>
+  <p>--Be ruthless with prioritization: "never assign high-grade resources to
+    anything but major opportunities...[do] not create resources for secondary
+    opportunities...leave secondary opportunities to fend for themselves."</p>
+  <p>--Allocate resources by stack-ranking opportunities and resources, then use
+    "forced-choice" method to allocate top resources to top opportunities.</p>
+  <p>--Beware industries with high break-even volume and price requirements. "The
+    business that runs at a loss unless it runs at 98 percent capacity and at
+    boom-levels of price is highly vulnerable."</p>
+  <p>--"Unless the few really first-rate resources are put full-time on the few
+    outstanding opportunities, priorities have not really been set."</p>
+
+  <hr color="black">
+</div>
+
+<div class="content" id="contact">
+  Find me on
+  <a href="https://www.linkedin.com/in/mikeamccormick/" style="text-decoration:none">
+  LinkedIn
+</a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var nav = document.getElementById("mynav");
+var sticky = nav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
